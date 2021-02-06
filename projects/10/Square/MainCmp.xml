@@ -1,0 +1,244 @@
+<class>
+<keyword>class</keyword>
+<identifier "category"="class"  "defined"="true" >Main</identifier>
+<symbol>{</symbol>
+<classVarDec>
+<keyword>static</keyword>
+<keyword>boolean</keyword>
+<identifier "index"="0"  "category"="static"  "attr"="boolean"  "defined"="true" >test</identifier>
+<symbol>;</symbol>
+</classVarDec>
+<subroutineDec>
+<keyword>function</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >main</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<varDec>
+<keyword>var</keyword>
+<identifier "used"="true"  "category"="class" >SquareGame</identifier>
+<identifier "index"="0"  "category"="var"  "attr"="SquareGame"  "defined"="true" >game</identifier>
+<symbol>;</symbol>
+</varDec>
+<statements>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="var"  "attr"="SquareGame" >game</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "used"="true"  "category"="class" >SquareGame</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >new</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >game</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >run</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >game</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >dispose</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>function</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >test</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<varDec>
+<keyword>var</keyword>
+<keyword>int</keyword>
+<identifier "index"="0"  "category"="var"  "attr"="int"  "defined"="true" >i</identifier>
+<symbol>,</symbol>
+<identifier "index"="1"  "category"="var"  "attr"="int"  "defined"="true" >j</identifier>
+<symbol>;</symbol>
+</varDec>
+<varDec>
+<keyword>var</keyword>
+<identifier "used"="true"  "category"="class" >String</identifier>
+<identifier "index"="2"  "category"="var"  "attr"="String"  "defined"="true" >s</identifier>
+<symbol>;</symbol>
+</varDec>
+<varDec>
+<keyword>var</keyword>
+<identifier "used"="true"  "category"="class" >Array</identifier>
+<identifier "index"="3"  "category"="var"  "attr"="Array"  "defined"="true" >a</identifier>
+<symbol>;</symbol>
+</varDec>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="2"  "used"="true"  "category"="var"  "attr"="String" >s</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<stringConstant>string constant</stringConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="2"  "used"="true"  "category"="var"  "attr"="String" >s</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<keyword>null</keyword>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="3"  "used"="true"  "category"="var"  "attr"="Array" >a</identifier>
+<symbol>[</symbol>
+<expression>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>]</symbol>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="3"  "used"="true"  "category"="var"  "attr"="Array" >a</identifier>
+<symbol>[</symbol>
+<expression>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>]</symbol>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+</statements>
+<symbol>}</symbol>
+<keyword>else</keyword>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="var"  "attr"="int" >i</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="var"  "attr"="int" >i</identifier>
+</term>
+<symbol>*</symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>-</symbol>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="var"  "attr"="int" >j</identifier>
+</term>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="1"  "used"="true"  "category"="var"  "attr"="int" >j</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="var"  "attr"="int" >j</identifier>
+</term>
+<symbol>/</symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>-</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="var"  "attr"="int" >i</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="var"  "attr"="int" >i</identifier>
+</term>
+<symbol>|</symbol>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="var"  "attr"="int" >j</identifier>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol>}</symbol>
+</class>

@@ -1,0 +1,75 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Memory.jack
+
+/**
+ * This library provides two services: direct access to the computer's main
+ * memory (RAM), and allocation and recycling of memory blocks. The Hack RAM
+ * consists of 32,768 words, each holding a 16-bit binary number.
+ */ 
+class Memory {
+    /** Initializes the class. */
+    function void init() {
+        do Memory.poke(2048 ,16384-2048);
+        do Memory.poke(2049,-1);
+        return;
+    }
+
+    /** Returns the RAM value at the given address. */
+    function int peek(int address) {
+        var Array memory;
+        let memory = 0;
+        return memory[address];
+    }
+
+    /** Sets the RAM value at the given address to the given value. */
+    function void poke(int address, int value) {
+        var Array memory;
+        let memory = 0;
+        let memory[address] = value;
+        return;
+    }
+
+    /** Finds an available RAM block of the given size and returns
+     *  a reference to its base address. */
+    function int alloc(int size) {
+        var int current,length,next,nextHead;
+
+        let current = 2048;
+        let length = Memory.peek(current);
+        let next = Memory.peek(current + 1);
+        
+        while(length < size + 1){
+            let current = next;
+            let length = Memory.peek(next);
+            let next = Memory.peek(next + 1);       
+        }
+
+        let length = length - (size + 1);
+        do Memory.poke(current,length);
+
+        let nextHead = current + length;
+        do Memory.poke(nextHead,size + 1);
+        
+        return nextHead + 1;
+    }
+
+    /** De-allocates the given object (cast as an array) by making
+     *  it available for future allocations. */
+    function void deAlloc(Array o) {
+        var int segment,current,next;
+        let segment = o - 1;
+        
+        let current = 2048;
+        let next = Memory.peek(current + 1);
+        while(~(next = -1)){
+            let current = next;
+            let next = Memory.peek(next + 1);       
+        }
+        
+        do Memory.poke(current + 1,segment);
+        do Memory.poke(segment + 1, -1);
+        return;
+    }    
+}

@@ -1,0 +1,47 @@
+class Main{
+    function void main(){
+    
+        while(true){
+            do Main.question();
+        }
+        return;
+    }
+    function void question(){
+        var int number;
+
+        let number = Keyboard.readInt("What is number?");
+        if( Main.isPrime(number) = true ){
+            do Output.printString("Input number is prime");
+            do Output.println();
+            return;
+        }
+        do Output.printString("Input number is not prime");
+        do Output.println();
+        return;
+    }
+    function boolean isPrime(int n){
+        var int i;
+        if(n=2){
+            return true;
+        }
+        if( n<2 | (Main.isModZero(n,2) = true)){
+            return false;
+        }
+
+        let i = 3;
+        while( (i*i)<n | (i*i) = n ){
+            if(Main.isModZero(n,i) = true){
+                return false;
+            }
+            let i = i + 2;
+        }
+        return true;
+    }
+
+    function boolean isModZero(int n, int d){
+        if(((n/d) * d) = n) {
+            return true;
+        }
+        return false;
+    }
+}

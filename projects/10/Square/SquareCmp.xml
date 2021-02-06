@@ -1,0 +1,1211 @@
+<class>
+<keyword>class</keyword>
+<identifier "category"="class"  "defined"="true" >Square</identifier>
+<symbol>{</symbol>
+<classVarDec>
+<keyword>field</keyword>
+<keyword>int</keyword>
+<identifier "index"="0"  "category"="field"  "attr"="int"  "defined"="true" >x</identifier>
+<symbol>,</symbol>
+<identifier "index"="1"  "category"="field"  "attr"="int"  "defined"="true" >y</identifier>
+<symbol>;</symbol>
+</classVarDec>
+<classVarDec>
+<keyword>field</keyword>
+<keyword>int</keyword>
+<identifier "index"="2"  "category"="field"  "attr"="int"  "defined"="true" >size</identifier>
+<symbol>;</symbol>
+</classVarDec>
+<subroutineDec>
+<keyword>constructor</keyword>
+<identifier "used"="true"  "category"="class" >Square</identifier>
+<identifier "category"="subroutine"  "defined"="true" >new</identifier>
+<symbol>(</symbol>
+<parameterList>
+<keyword>int</keyword>
+<identifier "index"="0"  "category"="none"  "attr"="int"  "defined"="true" >Ax</identifier>
+<symbol>,</symbol>
+<keyword>int</keyword>
+<identifier "index"="1"  "category"="none"  "attr"="int"  "defined"="true" >Ay</identifier>
+<symbol>,</symbol>
+<keyword>int</keyword>
+<identifier "index"="2"  "category"="none"  "attr"="int"  "defined"="true" >Asize</identifier>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="arg"  "attr"="int" >Ax</identifier>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="arg"  "attr"="int" >Ay</identifier>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="arg"  "attr"="int" >Asize</identifier>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="subroutine" >draw</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<returnStatement>
+<keyword>return</keyword>
+<expression>
+<term>
+<keyword>this</keyword>
+</term>
+</expression>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >dispose</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Memory</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >deAlloc</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>this</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >draw</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>true</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >erase</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >incSize</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>&lt;</symbol>
+<term>
+<integerConstant>254</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>&amp;</symbol>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>&lt;</symbol>
+<term>
+<integerConstant>510</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="subroutine" >erase</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="subroutine" >draw</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >decSize</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+<symbol>&gt;</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="subroutine" >erase</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="subroutine" >draw</identifier>
+<symbol>(</symbol>
+<expressionList>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >moveUp</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>&gt;</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>true</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >moveDown</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>&lt;</symbol>
+<term>
+<integerConstant>254</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>true</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >moveLeft</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>&gt;</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>true</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<subroutineDec>
+<keyword>method</keyword>
+<keyword>void</keyword>
+<identifier "category"="subroutine"  "defined"="true" >moveRight</identifier>
+<symbol>(</symbol>
+<parameterList>
+</parameterList>
+<symbol>)</symbol>
+<subroutineBody>
+<symbol>{</symbol>
+<statements>
+<ifStatement>
+<keyword>if</keyword>
+<symbol>(</symbol>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>&lt;</symbol>
+<term>
+<integerConstant>510</integerConstant>
+</term>
+</expression>
+<symbol>)</symbol>
+<symbol>{</symbol>
+<statements>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>false</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<letStatement>
+<keyword>let</keyword>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+<symbol>=</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<integerConstant>2</integerConstant>
+</term>
+</expression>
+<symbol>;</symbol>
+</letStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >setColor</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<keyword>true</keyword>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+<doStatement>
+<keyword>do</keyword>
+<identifier "used"="true"  "category"="class" >Screen</identifier>
+<symbol>.</symbol>
+<identifier "used"="true"  "category"="subroutine" >drawRectangle</identifier>
+<symbol>(</symbol>
+<expressionList>
+<expression>
+<term>
+<symbol>(</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>)</symbol>
+</term>
+<symbol>-</symbol>
+<term>
+<integerConstant>1</integerConstant>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="0"  "used"="true"  "category"="field"  "attr"="int" >x</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+<symbol>,</symbol>
+<expression>
+<term>
+<identifier "index"="1"  "used"="true"  "category"="field"  "attr"="int" >y</identifier>
+</term>
+<symbol>+</symbol>
+<term>
+<identifier "index"="2"  "used"="true"  "category"="field"  "attr"="int" >size</identifier>
+</term>
+</expression>
+</expressionList>
+<symbol>)</symbol>
+<symbol>;</symbol>
+</doStatement>
+</statements>
+<symbol>}</symbol>
+</ifStatement>
+<returnStatement>
+<keyword>return</keyword>
+<symbol>;</symbol>
+</returnStatement>
+</statements>
+<symbol>}</symbol>
+</subroutineBody>
+</subroutineDec>
+<symbol>}</symbol>
+</class>
